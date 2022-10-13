@@ -23,15 +23,24 @@
           <h2>My Watchlist</h2>
         </div>
 
-        <div class="search-container">
-          <input type="search" id="search-bar" placeholder="Starwars" />
-          <button class="btn-search">Search</button>
-        </div>
+        <form>
+          <div class="search-container">
+            <input
+              type="search"
+              id="search-bar"
+              placeholder="Starwars"
+              spellcheck="false"
+              autocomplete="off"
+              required
+            />
+            <button id="btn-search">Search</button>
+          </div>
+        </form>
       </div>
     </header>
 
     <section class="section-results">
-      <div class="search-default">
+      <div id="search-results">
         <img src="images/reel.png" />
         <h2>Start Exploring</h2>
       </div>
