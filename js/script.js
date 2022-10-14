@@ -1,9 +1,5 @@
 "use strict";
 
-// 1. Search bar calls to api with the movie title input and displays search results
-
-// 2."Add to watchlist" btn saves that data to local storage
-
 document.addEventListener("DOMContentLoaded", function () {
   const searchBar = document.getElementById("search-bar");
   const btnSearch = document.getElementById("btn-search");
@@ -21,7 +17,20 @@ document.addEventListener("DOMContentLoaded", function () {
       .then((data) => {
         console.log(data);
 
-        searchResults.innerHTML = `
+        // Save movie data to localStorage when addto-watchlist div is clicked
+        const saveToLS = function (data) {
+          localStorage.setItem("poster", data.Poster);
+          localStorage.setItem("title", data.Title);
+          localStorage.setItem(
+            "rating",
+            data.Ratings.Value ? data.Ratings[0].Value : "N/A"
+          );
+          localStorage.setItem("runtime", data.Runtime);
+          localStorage.setItem("genre", data.Genre);
+          console.log(localStorage);
+        };
+
+        const movieCard = `
     <div class="movie-card">
     <div class="poster-container">
     <img src=${data.Poster} />
@@ -37,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
     <div class="runtime-genre-container">
     <h5>${data.Runtime}</h5>
     <h5>${data.Genre}</h5>
-    <div class="addto-watchlist">
+    <div class="addto-watchlist" onclick="${saveToLS(data)}">
     <img src="../images/add.png" />
     <h5>Watchlist</h5>
     </div>
@@ -47,6 +56,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     </div>
     `;
+
+        searchResults.innerHTML = movieCard;
+      })
+      .catch((err) => {
+        searchResults.innerHTML = `<h2 class="error-text">Unable to find what you're looking for. Please try another search.</h2>`;
       });
   });
 });

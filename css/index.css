@@ -45,6 +45,11 @@ header {
   font-size: 14px;
 }
 
+.text-container > h2:hover {
+  color: yellow;
+  cursor: pointer;
+}
+
 /*SEARCH BAR*/
 .search-container {
   display: flex;
@@ -136,7 +141,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .poster-container > img {
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 /*Right side of cards*/
@@ -181,6 +186,11 @@ input[type="search"]::-webkit-search-results-decoration {
   align-items: center;
 }
 
+.addto-watchlist:hover {
+  color: yellow;
+  cursor: pointer;
+}
+
 .addto-watchlist > img {
   width: 16px;
   height: 16px;
@@ -196,4 +206,9 @@ input[type="search"]::-webkit-search-results-decoration {
   font-size: 14px;
   font-weight: 400;
   color: #a5a5a5;
+}
+
+/*ERROR*/
+.error-text {
+  color: #787878;
 }
