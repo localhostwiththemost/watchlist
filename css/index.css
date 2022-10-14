@@ -45,7 +45,12 @@ header {
   font-size: 14px;
 }
 
-.text-container > h2:hover {
+.text-container > h2 > a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.text-container > h2 > a:hover {
   color: yellow;
   cursor: pointer;
 }

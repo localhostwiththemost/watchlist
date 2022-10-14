@@ -1,0 +1,99 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/*HEADER*/
+
+.heading-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+  gap: 25px;
+}
+
+header {
+  background: linear-gradient(#0e0e0e, #0e0e0e),
+    url(../images/header.png) no-repeat;
+  background-blend-mode: saturation;
+  background-size: cover;
+  width: 100%;
+  height: 208px;
+  color: #fff;
+}
+
+.text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+
+.text-container > h1 {
+  font-weight: 800;
+  font-size: 42px;
+}
+
+.text-container > h2 {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.text-container > h2 > a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.text-container > h2 > a:hover {
+  color: yellow;
+  cursor: pointer;
+}
+
+/*MOVIE PICKS SECTIONS*/
+.section-picks {
+  display: flex;
+  justify-content: center;
+  background: #121212;
+  color: #2e2e2f;
+  height: 100vh;
+}
+
+#movie-picks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.empty-watchlist {
+  color: #787878;
+  font-weight: 700;
+}
+
+.add-movies {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.add-movies > img {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+}
+
+.add-movies > h3 > a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.add-movies > h3 > a:hover {
+  color: yellow;
+  cursor: pointer;
+}

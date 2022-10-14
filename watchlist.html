@@ -1,12 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Movie Watchlist</title>
-</head>
-<body>
-        
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/watchlist.css" />
+    <script src="js/watchlist.js"></script>
+    <title>Movie Watchlist</title>
+  </head>
+  <body>
+    <header>
+      <div class="heading-container">
+        <div class="text-container">
+          <h1>My Watchlist</h1>
+          <h2><a href="index.html">Search for movies</a></h2>
+        </div>
+      </div>
+    </header>
+
+    <section class="section-picks">
+      <div id="movie-picks">
+        <h2 class="empty-watchlist">
+          Your watchlist is looking a little empty...
+        </h2>
+        <div class="add-movies">
+          <img src="../images/add.png" />
+          <h3><a href="index.html">Let's add some movies!</a></h3>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
