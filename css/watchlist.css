@@ -97,3 +97,86 @@ header {
   color: yellow;
   cursor: pointer;
 }
+
+.movie-card {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 20px;
+  border-bottom: 1.5px solid #2c2c2c;
+}
+
+/*Left side of cards*/
+.poster-container {
+  width: 125px;
+  height: 175px;
+}
+
+.poster-container > img {
+  width: 100%;
+  height: auto;
+}
+
+/*Right side of cards*/
+.info-container {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.title-rating-container {
+  /*Row 1 of card*/
+  display: flex;
+  gap: 5px;
+  white-space: nowrap;
+}
+
+.title-rating-container > h3 {
+  /*Movie Title*/
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.title-rating-container > h4 {
+  /*Movie Rating*/
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.runtime-genre-container {
+  /*Row 2 of card*/
+  display: flex;
+  gap: 10px;
+  white-space: nowrap;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.remove-watchlist {
+  display: flex;
+  align-items: center;
+}
+
+.remove-watchlist:hover {
+  color: yellow;
+  cursor: pointer;
+}
+
+.remove-watchlist > img {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+}
+
+.remove-watchlist > h5 {
+  vertical-align: middle;
+}
+
+.plot {
+  /*Row 3 of card*/
+  font-size: 14px;
+  font-weight: 400;
+  color: #a5a5a5;
+}
