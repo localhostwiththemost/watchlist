@@ -3,6 +3,8 @@
 const searchBar = document.getElementById("search-bar");
 const btnSearch = document.getElementById("btn-search");
 const searchResults = document.getElementById("search-results");
+const modal = document.querySelector(".modal");
+const btnCloseModal = document.querySelector(".close-modal");
 
 // SEARCH BUTTON
 btnSearch.addEventListener("click", function (e) {
@@ -63,8 +65,12 @@ btnSearch.addEventListener("click", function (e) {
             localStorage.setItem("plot", data.Plot);
           }
 
-          // Create alert modal here:
-          alert("Movie saved to Watchlist");
+          // Remove hidden class from modal and re-add it after 5secs
+          modal.classList.remove("hidden");
+
+          setTimeout(function () {
+            modal.classList.add("hidden");
+          }, 6000);
         });
 
       searchResults.innerHTML = movieCard;
@@ -73,3 +79,5 @@ btnSearch.addEventListener("click", function (e) {
       searchResults.innerHTML = `<h2 class="error-text">Unable to find what you're looking for. Please try another search.</h2>`;
     });
 });
+
+// POPUP MODAL
