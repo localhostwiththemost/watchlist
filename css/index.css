@@ -134,8 +134,9 @@ input[type="search"]::-webkit-search-results-decoration {
   display: flex;
   flex-direction: row;
   gap: 20px;
-  padding: 20px;
+  padding: 20px 50px 40px 50px;
   border-bottom: 1.5px solid #2c2c2c;
+  margin: 0 50px 0 50px;
 }
 
 /*Left side of cards*/
@@ -214,8 +215,23 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 /*POP UP MODAL*/
+/*Slide in from left animation*/
 .hidden {
-  display: none;
+  opacity: 0;
+  filter: blur(3px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.hideModal {
+  opacity: 0;
+  transition: all 1s;
 }
 
 .modal {

@@ -42,10 +42,12 @@ btnSearch.addEventListener("click", function (e) {
     </div>
     
     <p class="plot">${data.Plot}</p>
-
+    
+    </div>
     </div>
     `;
 
+      // ADD TO WATCHLIST
       // Save movie data to localStorage when addto-watchlist div is clicked
       document
         .querySelector("#search-results")
@@ -65,11 +67,14 @@ btnSearch.addEventListener("click", function (e) {
             localStorage.setItem("plot", data.Plot);
           }
 
-          // Remove hidden class from modal and re-add it after 5secs
-          modal.classList.remove("hidden");
+          // When the Add To Watchlist div is clicked, add the show class to the modal to trigger sliding animation
+          modal.classList.add("show");
 
+          // Remove animation classes from modal and give it display: none after 6secs
           setTimeout(function () {
-            modal.classList.add("hidden");
+            modal.classList.remove("hidden");
+            modal.classList.remove("show");
+            modal.classList.add("hideModal");
           }, 6000);
         });
 
@@ -79,5 +84,3 @@ btnSearch.addEventListener("click", function (e) {
       searchResults.innerHTML = `<h2 class="error-text">Unable to find what you're looking for. Please try another search.</h2>`;
     });
 });
-
-// POPUP MODAL
