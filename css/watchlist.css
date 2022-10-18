@@ -111,6 +111,7 @@ header {
 .poster-container {
   width: 125px;
   height: 175px;
+  min-width: 125px;
 }
 
 .poster-container > img {
