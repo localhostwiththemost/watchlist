@@ -35,14 +35,50 @@ header {
   gap: 100px;
 }
 
+@media only screen and (max-width: 600px) {
+  .text-container {
+    white-space: nowrap;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .text-container {
+    gap: 50px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .text-container {
+    gap: 20px;
+  }
+}
+
 .text-container > h1 {
   font-weight: 800;
   font-size: 42px;
 }
 
+@media only screen and (max-width: 600px) {
+  .text-container > h1 {
+    font-size: 32px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .text-container > h1 {
+    font-size: 22px;
+  }
+}
+
 .text-container > h2 {
   font-weight: 700;
   font-size: 14px;
+}
+
+@media only screen and (max-width: 600px) {
+  .text-container > h2 {
+    font-size: 12px;
+  }
 }
 
 .text-container > h2 > a {
@@ -79,6 +115,20 @@ header {
   border: none;
 }
 
+@media only screen and (max-width: 450px) {
+  #search-bar {
+    padding: 12px 40px 13px 0;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  #search-bar {
+    padding: 12px 10px 13px 0;
+    width: 50%;
+    min-width: 50%;
+  }
+}
+
 #search-bar::placeholder {
   color: #a5a5a5;
   font-size: 14px;
@@ -106,6 +156,12 @@ input[type="search"]::-webkit-search-results-decoration {
   font-weight: 500;
   font-size: 14px;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 375px) {
+  #btn-search {
+    padding: 12px 20px 13px 20px;
+  }
 }
 
 #btn-search:hover {
@@ -139,11 +195,31 @@ input[type="search"]::-webkit-search-results-decoration {
   margin: 0 50px 0 50px;
 }
 
+@media only screen and (max-width: 600px) {
+  .movie-card {
+    padding: 20px 0px 40px 0px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .movie-card {
+    gap: 10px;
+  }
+}
+
 /*Left side of cards*/
 .poster-container {
   width: 125px;
   height: 175px;
   min-width: 125px;
+}
+
+@media only screen and (max-width: 450px) {
+  .poster-container {
+    width: 100px;
+    height: 150px;
+    min-width: 100px;
+  }
 }
 
 .poster-container > img {
@@ -165,6 +241,12 @@ input[type="search"]::-webkit-search-results-decoration {
   white-space: nowrap;
 }
 
+@media only screen and (max-width: 375px) {
+  .title-rating-container {
+    flex-direction: column;
+  }
+}
+
 .title-rating-container > h3 {
   /*Movie Title*/
   font-size: 18px;
@@ -172,11 +254,30 @@ input[type="search"]::-webkit-search-results-decoration {
   line-height: 20px;
 }
 
+@media only screen and (max-width: 450px) {
+  .title-rating-container > h3 {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .title-rating-container > h3 {
+    margin: 0;
+  }
+}
+
 .title-rating-container > h4 {
   /*Movie Rating*/
   font-size: 12px;
   font-weight: 400;
   line-height: 24px;
+}
+
+@media only screen and (max-width: 375px) {
+  .title-rating-container > h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
 }
 
 .runtime-genre-container {
@@ -188,9 +289,34 @@ input[type="search"]::-webkit-search-results-decoration {
   font-weight: 400;
 }
 
+@media only screen and (max-width: 450px) {
+  .runtime-genre-container {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .runtime-genre-container {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .runtime-genre-container > h5 {
+    margin: 0;
+  }
+}
+
 .addto-watchlist {
   display: flex;
   align-items: center;
+}
+
+@media only screen and (max-width: 375px) {
+  .addto-watchlist > h5 {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .addto-watchlist:hover {
@@ -213,6 +339,12 @@ input[type="search"]::-webkit-search-results-decoration {
   font-size: 14px;
   font-weight: 400;
   color: #a5a5a5;
+}
+
+@media only screen and (max-width: 450px) {
+  .plot {
+    font-size: 12px;
+  }
 }
 
 /*POP UP MODAL*/
