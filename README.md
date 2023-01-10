@@ -8,6 +8,6 @@ I built this project to further develop my understanding of JavaScript's fetch A
 
 ## Technologies Used
 
--HTML5
--CSS3
--JavaScript
+- HTML5
+- CSS3
+- JavaScript
